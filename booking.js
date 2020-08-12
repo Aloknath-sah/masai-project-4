@@ -1,23 +1,53 @@
+let bookingInfo = []
+
 window.onload = ()=>{
-    
+    let form = document.querySelector("form");
+    form.addEventListener("submit",()=>{
+        renderDailyCharge()
+        dropOff()
+        console.log(bookingInfo)
+        window.location = "invoice.html"
+    })
 }
+//PickUp & DropOff distinction functionality
+const dropOff = ()=>{
+    event.preventDefault();
+    let vehcName = document.getElementById("inputVehcName").value;
+    let pickUpLoc = document.getElementById("inputPickUpLoc").value;
+    let dropOffLoc = document.getElementById("inputDropOffLoc").value;
+    bookingInfo.push({vehcName,pickUpLoc,dropOffLoc})
 
-
-
-
+    // console.log( pickUpLoc, dropOffLoc )
+    if( pickUpLoc == dropOffLoc ){
+        let error = document.getElementById("error");
+        error.textContent = "Invalid Selection"
+    }else{
+        return
+    }
+}
 
 
 //Function for finding Charge per day
-function dayCharge(startDate ,endDate,dailyCharge){
-    let startT = new Date(startDate)
-    let endT = new Date(endDate)
+const renderDailyCharge = ()=>{
+    event.preventDefault();
+    let pickUp = document.getElementById("inputPickUpDate").value;
+    let dropOff = document.getElementById("inputDropOffDate").value;
 
-    let elapsed =   endT.getTime() - startT.getTime()
-    let day = Math.ceil(elapsed/86400000)
-    let charge = day*dailyCharge
+    let startT = new Date(pickUp)
+    let endT = new Date(dropOff)
 
-    return charge
+    let days
+    let elapsed =  endT.getTime() - startT.getTime()
+     if(elapsed >= 1 && startT<endT){
+        days = Math.ceil(elapsed/86400000)
+     }
+     else{
+        days = 1
+    }
+    bookingInfo.push({pickUp,dropOff,days})
+
 }
+
 
 // Function for Google map with Bangalore Latitude & Longitude
 function myMap() {
@@ -27,3 +57,4 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
+
