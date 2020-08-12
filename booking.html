@@ -5,58 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style type="text/css">
+        .custom-centered{
+            margin:5% auto;
+        }
+        body {
+            background-image: url("images/imgBook.jpg");
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+    </style>
 </head>
 <body>
+    <!----------------- Book a car details------------>
     <div class="container-fluid">
-        <div class="card" style="width: 50%;">
-            <div class="card-header text-center">
+        <div class="card custom-centered" style="width: 40%;">
+            <div class="card-header text-center bg-dark text-light">
                 <h3>Booking Details</h3>
             </div>
             <div class="card-body">
                 <form>
                     <div class="form-group row">
-                        <label for="inputVehcName" class="col-sm-2 col-form-label">State</label>
-                        <select id="inputVehcName" class="form-control col-sm-10">
+                        <label for="inputVehcName" class="col-sm-3 col-form-label">State</label>
+                        <select id="inputVehcName" class="form-control col-sm-9">
                           <option selected>Choose...</option>
                           <option>...</option>
                         </select>
                       </div>
                     <div class="form-group row">
-                        <label for="inputPickUpLoc" class="col-sm-2 col-form-label">Pick Up Location</label>
-                        <div class="col-sm-10">
+                        <label for="inputPickUpLoc" class="col-sm-3 col-form-label">Pick Up Location</label>
+                        <div class="col-sm-9">
                           <input type="text" class="form-control" id="inputPickUpLoc">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputPickUpDate" class="col-sm-2 col-form-label">Pick Up Date</label>
-                        <div class="col-sm-10">
+                        <label for="inputPickUpDate" class="col-sm-3 col-form-label">Pick Up Date</label>
+                        <div class="col-sm-9">
                           <input type="text" class="form-control" id="inputPickUpDate">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputDropOffLoc" class="col-sm-2 col-form-label">Drop Off Location</label>
-                        <div class="col-sm-10">
+                        <label for="inputDropOffLoc" class="col-sm-3 col-form-label">Drop Off Location</label>
+                        <div class="col-sm-9">
                           <input type="text" class="form-control" id="inputDropOffLoc">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputDropOffDate" class="col-sm-2 col-form-label">Drop Off Date</label>
-                        <div class="col-sm-10">
+                        <label for="inputDropOffDate" class="col-sm-3 col-form-label">Drop Off Date</label>
+                        <div class="col-sm-9">
                           <input type="text" class="form-control" id="inputDropOffDate">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputCharge" class="col-sm-2 col-form-label">Charge/Day</label>
-                        <div class="col-sm-10">
+                        <label for="inputCharge" class="col-sm-3 col-form-label">Charge/Day</label>
+                        <div class="col-sm-9">
                           <input type="text" class="form-control" id="inputCharge">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputAdvance" class="col-sm-2 col-form-label">Advance Payment</label>
-                        <div class="col-sm-10">
+                        <label for="inputAdvance" class="col-sm-3 col-form-label">Advance Payment</label>
+                        <div class="col-sm-9">
                           <input type="text" class="form-control" id="inputAdvance">
                         </div>
                     </div>
+                    <button type="submit" style="margin-left: 35%;" class="btn btn-primary btn-lg text-center">Book the Car</button>
                 </form>
             </div>
           </div>
