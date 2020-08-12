@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Baloo Tamma 2', cursive;
+        }
+    </style>
 </head>
 <body>
-    <p>Hi</p>
+    <div class="container-fluid">
+        <div class="row">
+            <!---------- Invoice Details ----------->
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header text-center bg-dark text-light h1">Invoice Details</div>
+                    <div class="card-body text-center">
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Vehicle Name</label>
+                            <div class="col-sm-9">
+                              <p id="vehcName"></p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Pick Up Location</label>
+                            <div class="col-sm-9">
+                              <p id="pickUpLoc"></p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Pick Up Date</label>
+                            <div class="col-sm-9">
+                                <p id="pickUpDate"></p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Drop Off Location</label>
+                            <div class="col-sm-9">
+                                <p id="dropOffLoc"></p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Drop Off Date</label>
+                            <div class="col-sm-9">
+                                <p id="dropOffDate"></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Fare</label>
+                            <div class="col-sm-9">
+                              <p id="fare"></p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">GST 18%</label>
+                            <div class="col-sm-9">
+                              <p id="gst"></p>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="form-group row text-center">
+                            <label for="inputAdvance" class="col-sm-3 col-form-label">Final Amount</label>
+                            <div class="col-sm-9">
+                              <strong><p id="final"></p></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="invoice.js"></script>
 </body>
 </html>
