@@ -4,74 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style type="text/css">
         .custom-centered{
-            margin:5% auto;
+            margin:5% auto;            
         }
         body {
+            font-family: 'Baloo Tamma 2', cursive;
             background-image: url("images/imgBook.jpg");
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-attachment: scroll;
+            background-size: auto auto;
         }
     </style>
 </head>
 <body>
-    <!----------------- Book a car details------------>
-    <div class="container-fluid">
-        <div class="card custom-centered" style="width: 40%;">
-            <div class="card-header text-center bg-dark text-light">
-                <h3>Booking Details</h3>
-            </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group row">
-                        <label for="inputVehcName" class="col-sm-3 col-form-label">State</label>
-                        <select id="inputVehcName" class="form-control col-sm-9">
-                          <option selected>Choose...</option>
-                          <option>...</option>
-                        </select>
-                      </div>
-                    <div class="form-group row">
-                        <label for="inputPickUpLoc" class="col-sm-3 col-form-label">Pick Up Location</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="inputPickUpLoc">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputPickUpDate" class="col-sm-3 col-form-label">Pick Up Date</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="inputPickUpDate">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputDropOffLoc" class="col-sm-3 col-form-label">Drop Off Location</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="inputDropOffLoc">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputDropOffDate" class="col-sm-3 col-form-label">Drop Off Date</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="inputDropOffDate">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputCharge" class="col-sm-3 col-form-label">Charge/Day</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="inputCharge">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputAdvance" class="col-sm-3 col-form-label">Advance Payment</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="inputAdvance">
-                        </div>
-                    </div>
-                    <button type="submit" style="margin-left: 35%;" class="btn btn-primary btn-lg text-center">Book the Car</button>
-                </form>
-            </div>
+  <!----------------- Book a car details------------>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="card custom-centered">
+          <div class="card-header text-center bg-dark text-light">
+              <h3>Booking Details</h3>
           </div>
+          <div class="card-body">
+              <form>
+                  <div class="form-group row">
+                      <label for="inputVehcName" class="col-sm-3 col-form-label">State</label>
+                      <select id="inputVehcName" class="form-control col-sm-9">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  <div class="form-group row">
+                      <label for="inputPickUpLoc" class="col-sm-3 col-form-label">Pick Up Location</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputPickUpLoc">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="inputPickUpDate" class="col-sm-3 col-form-label">Pick Up Date</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputPickUpDate">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="inputDropOffLoc" class="col-sm-3 col-form-label">Drop Off Location</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputDropOffLoc">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="inputDropOffDate" class="col-sm-3 col-form-label">Drop Off Date</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputDropOffDate">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="inputCharge" class="col-sm-3 col-form-label">Charge/Day</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputCharge">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="inputAdvance" class="col-sm-3 col-form-label">Advance Payment</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputAdvance">
+                      </div>
+                  </div>
+                  <button type="submit" style="margin-left: 35%;" class="btn btn-primary btn-lg text-center">Book the Car</button>
+              </form>
+          </div>
+          </div>
+      </div>
+      <!------------ Added Map functionality ------------->
+      <div class="col-sm-12 col-md-6">
+        <div id="googleMap" class="custom-centered" style="width:100%;height:90%;"></div>
+      </div>
     </div>
+  </div>
+  <script type="text/javascript" src="booking.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoGScES46d2y4028zjAABNQ2rMdUE3L_U&callback=myMap"></script>
 </body>
 </html>
