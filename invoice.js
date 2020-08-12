@@ -1,3 +1,5 @@
+var ctx, chart
+
 window.onload = ()=>{
     var vehcName = document.getElementById("vehcName")
     vehcName.textContent = localStorage.getItem("vehcName");
@@ -24,4 +26,53 @@ window.onload = ()=>{
     var final = document.getElementById("final")
     final.textContent = `₹${days*1000 + 0.18*(days*1000)}`
 
+    let date = localStorage.getItem("pickUp")
+    let finalAmt = (days*1000 + 0.18*(days*1000))
+
+    let payload = {date,finalAmt}
+    console.log(payload)
+    
+    addData(chart, payload)
+}
+  
+
+ctx = document.getElementById('chart')
+
+chart = new Chart(ctx,{
+    type: 'bar',
+    data:{
+        labels: ['2020-08-05','2020-08-07','2020-08-09'],
+        datasets: [{
+            label: 'expenditure',
+            data: [ 2000,1500,2500],
+            backgroundColor: createColor(255)
+        }
+    ],
+        borderWidth: 1
+    },
+    options:{
+        scales: {
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }
+            ]
+        }
+    }
+})
+
+function addData(chart,{ date, finalAmt }){
+    chart.data.labels.push(date)
+    chart.data.datasets[0].data.push(finalAmt)
+    chart.update()
+}
+
+function random(num){
+    return Math.floor( Math.random() * num)
+}
+
+function createColor(num){
+    return `rgba(${random(255)},${random(255)},${random(255)})`
 }
