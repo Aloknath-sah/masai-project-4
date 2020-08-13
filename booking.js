@@ -10,7 +10,7 @@ window.onload = ()=>{
         renderDailyCharge()
         dropOff()
         // console.log(bookingInfo[0].pickUp)
-        window.location = "invoice.html"
+       
     })
 }
 //PickUp & DropOff distinction functionality
@@ -31,6 +31,7 @@ const dropOff = ()=>{
         error.textContent = "Invalid Selection"
     }else{
         localStorage.setItem("dropOffLoc",dropOffLoc);
+        window.location = "invoice.html"
     }
 }
 

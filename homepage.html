@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>masai car rental</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
     <!--bootstrap link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Baloo Tamma 2', cursive;
+        }
+    </style>
 </head>
 <body class="mx-2">
     <!--navbar -->
     <nav class="navbar navbar-expand navbar-light bg-light ">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item ">
-                    <h3 class="m-0 mr-4 text-success">MASAI</h3>
-                    <p class="m-0 pl-1 mr-4 text-success">car rental</p>
+                <li class="nav-item m-1">
+                    <img src="images/logo.jpg" alt="logo" style="width: 50px; height: 50px;">
+                    <!-- <h3 class="m-0 mr-4 text-success">MASAI</h3>
+                    <p class="m-0 pl-1 mr-4 text-success">car rental</p> -->
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item active mt-2">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active mt-2">
                     <a class="nav-link" href="about_us.html">About us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active mt-2">
                     <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
             </ul>
@@ -31,7 +37,7 @@
                 <li class="nav-item mx-2">
                     <!--registration form-->
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-secondary rounded-pill" data-toggle="modal" data-target="#exampleModal">
                         Register
                     </button>
                     
@@ -71,7 +77,7 @@
                 <li class="nav-item ">
                     <!--Login form-->
                     <!-- Button trigger modal -->
-                    <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#example1Modal">
+                    <button type="button" class="btn btn-secondary rounded-pill" data-toggle="modal" data-target="#example1Modal">
                         Login 
                     </button>
                     
@@ -112,6 +118,10 @@
         </div>
     </nav>
 
+    <!--------- HEADING----------- -->
+    <div class="text-center text-light bg-info mt-0 pt-2 mb-2">
+        <h2>Welcome to Masai Car Rental Service</h2>
+    </div>
     <!-- carosal image -->
     <div class="" >
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -119,15 +129,23 @@
                 <div class="carousel-item active" style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1536617621572-1d5f1e6269a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 img-fluid" alt="car_3">
                     <div class="carousel-caption d-md-block">
-                        <h1 class="text-">DRIVE IN OUR SANITIZED CAR</h1>
+                        <h1>DRIVE IN OUR SANITIZED CAR</h1>
                         <h2>With only Rs.1000 per Day</h2>
                     </div>
                 </div>
                 <div class="carousel-item "style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1565689875768-39dcfc17c2b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80" class="d-block w-100"img-fluid" alt="car_2">
+                    <div class="carousel-caption d-md-block">
+                        <h1>GET FREE RIDE INSURANCE WITH EACH BOOKING</h1>
+                        <h2>With only Rs.1000 per Day</h2>
+                    </div>
                 </div>
                 <div class="carousel-item" style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1572974717716-cf4ff9c3221e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 "alt="car_1" >
+                    <div class="carousel-caption d-md-block">
+                        <h1>WE OFFER BEST CUSTOMER SUPPORT 24x7</h1>
+                        <h2>With only Rs.1000 per Day</h2>
+                    </div>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -140,9 +158,14 @@
             </a>
         </div>
     </div>
+    
+      
 
     <!--car details -->
-    <div class="text-center text-light bg-dark"><h2>BOOK YOUR CAR</h2></div>
+    <div class="text-center text-light bg-dark mt-3 pt-2 mb-2">
+        <h2>BOOK YOUR CAR</h2>
+    </div>
+    <!-- <div class="text-center text-light bg-dark"><h2>BOOK YOUR CAR</h2></div> -->
     <div class="row ">
         <div class="col-md-12 col-lg-6 ">
             <div class="shadow p-3">
