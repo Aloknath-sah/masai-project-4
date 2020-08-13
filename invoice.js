@@ -1,8 +1,12 @@
 var ctx, chart
 
 window.onload = ()=>{
+
     var vehcName = document.getElementById("vehcName")
-    vehcName.textContent = localStorage.getItem("vehcName");
+    vehcName.textContent = localStorage.getItem("veh");
+
+    //var vehcName = document.getElementById("vehcName")
+    //vehcName.textContent = localStorage.getItem("vehcName");
 
     var pickUpLoc = document.getElementById("pickUpLoc")
     pickUpLoc.textContent = localStorage.getItem("pickUpLoc");

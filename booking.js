@@ -1,6 +1,10 @@
 let bookingInfo = []
 
 window.onload = ()=>{
+
+    let d_vehicle = document.getElementById("d-vehicle")
+    d_vehicle.textContent = localStorage.getItem("veh")
+
     let form = document.querySelector("form");
     form.addEventListener("submit",()=>{
         renderDailyCharge()
@@ -12,13 +16,14 @@ window.onload = ()=>{
 //PickUp & DropOff distinction functionality
 const dropOff = ()=>{
     event.preventDefault();
-    let vehcName = document.getElementById("inputVehcName").value;
-    localStorage.setItem("vehcName",vehcName);
+    //localStorage.removeItem("veh")
+    //let vehcName = document.getElementById("inputVehcName").value;
+    //localStorage.setItem("vehcName",vehcName);
     let pickUpLoc = document.getElementById("inputPickUpLoc").value;
     localStorage.setItem("pickUpLoc",pickUpLoc);
     let dropOffLoc = document.getElementById("inputDropOffLoc").value;
     // localStorage.setItem("dropOffLoc",dropOffLoc);
-    bookingInfo.push({vehcName,pickUpLoc,dropOffLoc})
+    bookingInfo.push({pickUpLoc,dropOffLoc})
 
     // console.log( pickUpLoc, dropOffLoc )
     if( pickUpLoc == dropOffLoc ){
