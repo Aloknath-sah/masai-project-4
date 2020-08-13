@@ -5,7 +5,7 @@ window.onload = ()=>{
     form.addEventListener("submit",()=>{
         renderDailyCharge()
         dropOff()
-        console.log(bookingInfo[0].pickUp)
+        // console.log(bookingInfo[0].pickUp)
         window.location = "invoice.html"
     })
 }
@@ -17,7 +17,7 @@ const dropOff = ()=>{
     let pickUpLoc = document.getElementById("inputPickUpLoc").value;
     localStorage.setItem("pickUpLoc",pickUpLoc);
     let dropOffLoc = document.getElementById("inputDropOffLoc").value;
-    localStorage.setItem("dropOffLoc",dropOffLoc);
+    // localStorage.setItem("dropOffLoc",dropOffLoc);
     bookingInfo.push({vehcName,pickUpLoc,dropOffLoc})
 
     // console.log( pickUpLoc, dropOffLoc )
@@ -25,7 +25,7 @@ const dropOff = ()=>{
         let error = document.getElementById("error");
         error.textContent = "Invalid Selection"
     }else{
-        return
+        localStorage.setItem("dropOffLoc",dropOffLoc);
     }
 }
 

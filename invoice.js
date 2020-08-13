@@ -43,9 +43,9 @@ chart = new Chart(ctx,{
     data:{
         labels: ['2020-08-05','2020-08-07','2020-08-09'],
         datasets: [{
-            label: 'expenditure',
+            label: 'Expenditure',
             data: [ 2000,1500,2500],
-            backgroundColor: createColor(255)
+            backgroundColor: '#776d8a'
         }
     ],
         borderWidth: 1
