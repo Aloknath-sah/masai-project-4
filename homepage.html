@@ -8,7 +8,7 @@
     <!--bootstrap link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body class="mx-2">
     <!--navbar -->
     <nav class="navbar navbar-expand navbar-light bg-light ">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,7 +28,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
+                <li class="nav-item mx-2">
                     <!--registration form-->
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -68,7 +68,7 @@
                     </div>
                 </li>
                 
-                <li class="nav-item mx-2">
+                <li class="nav-item ">
                     <!--Login form-->
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#example1Modal">
@@ -113,17 +113,21 @@
     </nav>
 
     <!-- carosal image -->
-    <div class="mx-2" >
+    <div class="" >
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner ">
                 <div class="carousel-item active" style="height: 600px;">
-                    <img src="https://images.unsplash.com/photo-1572974717716-cf4ff9c3221e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 "alt="car_1" >
+                    <img src="https://images.unsplash.com/photo-1536617621572-1d5f1e6269a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 img-fluid" alt="car_3">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="text-">DRIVE IN OUR SANITIZED CAR</h1>
+                        <h2>With only Rs.1000 per Day</h2>
+                    </div>
                 </div>
                 <div class="carousel-item "style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1565689875768-39dcfc17c2b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80" class="d-block w-100"img-fluid" alt="car_2">
                 </div>
                 <div class="carousel-item" style="height: 600px;">
-                    <img src="https://images.unsplash.com/photo-1536617621572-1d5f1e6269a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 img-fluid" alt="car_3">
+                    <img src="https://images.unsplash.com/photo-1572974717716-cf4ff9c3221e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 "alt="car_1" >
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -138,25 +142,26 @@
     </div>
 
     <!--car details -->
-    <div class="text-center text-danger"><h2>Choose Cars of your choice</h2></div>
+    <div class="text-center text-light bg-dark"><h2>BOOK YOUR CAR</h2></div>
     <div class="row ">
-        <div class="col-lg-6 ">
-            <div class="shadow">
-                <div class="row p-3 ">
-                    <div class="col-6">
+        <div class="col-md-12 col-lg-6 ">
+            <div class="shadow p-3">
+                <div class="row  ">
+                    <div class="col-6 ">
                         <img src="https://imgd.aeplcdn.com/642x336/cw/ec/38332/Hyundai-Elite-i20-Right-Front-Three-Quarter-148187.jpg?wm=0&q=85" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Hyundai i20</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-12 col-lg-6">
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6">
@@ -166,13 +171,14 @@
                         <h3>Maruti Swift</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-12 col-lg-6">
             <div class=" shadow">
                 <div class="row p-3">
                     <div class="col-6 ">
@@ -182,15 +188,16 @@
                         <h3>Ford Ecosport</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
-            <div class="shadow">
-                <div class="row p-3 ">
+        <div class="col-md-12 col-lg-6">
+            <div class="shadow p-3">
+                <div class="row  ">
                     <div class="col-6 ">
                         <img src="https://images.financialexpress.com/2018/06/Suzuki-Baleno-1-med.jpg" class="w-100">
                     </div>
@@ -198,13 +205,14 @@
                         <h3>Maruti Baleno</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-12 col-lg-6">
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6 ">
@@ -214,13 +222,14 @@
                         <h3>TATA Nexon</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-12 col-lg-6">
             <div class=" shadow">
                 <div class="row p-3">
                     <div class="col-6 ">
@@ -230,13 +239,14 @@
                         <h3>Volkswagen polo</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-12 col-lg-6">
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6 ">
@@ -246,13 +256,14 @@
                         <h3>Mahindra kuv</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-12 col-lg-6">
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6 ">
@@ -262,6 +273,7 @@
                         <h3>Hyundai Creta</h3>
                         <p>5 seater </p>
                         <p>3 bags</p>
+                        <p>Fare- ₹1000/Day</p>
                     </div>
                     <button class="btn btn-success offset-6">BOOK NOW</button>
                 </div>
