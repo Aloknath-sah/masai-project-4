@@ -1,6 +1,12 @@
 # MASAI-PROJECT-4
 ## Masai Car Rental Service Website
 
+## Technologies Used
+* HTML
+* CSS
+* Javascript
+* Bootstrap
+
 ### HOMEPAGE OF THE PROJECT
 
 ![Homepage](https://github.com/Aloknath-sah/masai-project-4/blob/master/images/homepage.png)
