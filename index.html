@@ -11,6 +11,9 @@
         body {
             font-family: 'Baloo Tamma 2', cursive;
         }
+        .hide {
+            display: none;
+        }
     </style>
 </head>
 <body class="mx-2">
@@ -34,7 +37,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2" id="reg">
                     <!--registration form-->
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-secondary rounded-pill" data-toggle="modal" data-target="#exampleModal">
@@ -57,6 +60,8 @@
                                 <div>
                                     <form id="register_form">
                                         <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" class="form-control" id="r_name" aria-describedby="emailHelp">
                                             <label>Email address</label>
                                             <input type="email" class="form-control" id="r_email" aria-describedby="emailHelp">
                                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -65,7 +70,7 @@
                                             <label>Password</label>
                                             <input type="password" class="form-control" id="r_password">
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Register</button>
+                                        <button  type="submit" class="btn btn-primary" >Register</button>
                                     </form>
                                 </div>
                             </div>
@@ -74,10 +79,10 @@
                     </div>
                 </li>
                 
-                <li class="nav-item ">
+                <li class="nav-item">
                     <!--Login form-->
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-secondary rounded-pill" data-toggle="modal" data-target="#example1Modal">
+                    <button id="log" type="button" class="btn btn-secondary rounded-pill" data-toggle="modal" data-target="#example1Modal">
                         Login 
                     </button>
                     
@@ -105,7 +110,7 @@
                                             <label>Password</label>
                                             <input type="password" class="form-control" id="l_password">
                                         </div>
-                                        <button id="login" type="submit" class="btn btn-primary">Login</button>
+                                        <button type="submit" class="btn btn-primary" >Login</button>
                                         <div id="error"></div>
                                     </form>
                                 </div>
@@ -113,6 +118,9 @@
                         </div>
                         </div>
                     </div>
+                </li>
+                <li>
+                    <h2 id="login"></h2>
                 </li>
             </ul>
         </div>
@@ -126,21 +134,21 @@
     <div class="" >
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner ">
-                <div class="carousel-item active" style="height: 600px;">
+                <div class="carousel-item active" data-interval="2000" style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1536617621572-1d5f1e6269a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 img-fluid" alt="car_3">
                     <div class="carousel-caption d-md-block">
                         <h1>DRIVE IN OUR SANITIZED CAR</h1>
                         <h2>With only Rs.1000 per Day</h2>
                     </div>
                 </div>
-                <div class="carousel-item "style="height: 600px;">
+                <div class="carousel-item " data-interval="2000" style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1565689875768-39dcfc17c2b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80" class="d-block w-100"img-fluid" alt="car_2">
                     <div class="carousel-caption d-md-block">
                         <h1>GET FREE RIDE INSURANCE WITH EACH BOOKING</h1>
                         <h2>With only Rs.1000 per Day</h2>
                     </div>
                 </div>
-                <div class="carousel-item" style="height: 600px;">
+                <div class="carousel-item" data-interval="2000" style="height: 600px;">
                     <img src="https://images.unsplash.com/photo-1572974717716-cf4ff9c3221e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="d-block w-100 "alt="car_1" >
                     <div class="carousel-caption d-md-block">
                         <h1>WE OFFER BEST CUSTOMER SUPPORT 24x7</h1>
@@ -171,7 +179,7 @@
             <div class="shadow p-3">
                 <div class="row  ">
                     <div class="col-6 ">
-                        <img src="https://imgd.aeplcdn.com/642x336/cw/ec/38332/Hyundai-Elite-i20-Right-Front-Three-Quarter-148187.jpg?wm=0&q=85" class="w-100">
+                        <img src="https://imgd.aeplcdn.com/642x336/cw/ec/38332/Hyundai-Elite-i20-Right-Front-Three-Quarter-148187.jpg?wm=0&q=85" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Hyundai i20</h3>
@@ -188,7 +196,7 @@
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6">
-                        <img src="https://img.indianautosblog.com/2020/05/16/2020-maruti-swift-facelift-yellow-japan-b773.jpg" class="w-100">
+                        <img src="https://img.indianautosblog.com/2020/05/16/2020-maruti-swift-facelift-yellow-japan-b773.jpg" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Maruti Swift</h3>
@@ -205,7 +213,7 @@
             <div class=" shadow">
                 <div class="row p-3">
                     <div class="col-6 ">
-                        <img src="https://imgd.aeplcdn.com/0x0/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0" class="w-100">
+                        <img src="https://imgd.aeplcdn.com/0x0/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Ford Ecosport</h3>
@@ -222,7 +230,7 @@
             <div class="shadow p-3">
                 <div class="row  ">
                     <div class="col-6 ">
-                        <img src="https://images.financialexpress.com/2018/06/Suzuki-Baleno-1-med.jpg" class="w-100">
+                        <img src="https://images.financialexpress.com/2018/06/Suzuki-Baleno-1-med.jpg" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Maruti Baleno</h3>
@@ -239,7 +247,7 @@
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6 ">
-                        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/41645/tata-nexon-right-front-three-quarter3.jpeg?q=85" class="w-100">
+                        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/41645/tata-nexon-right-front-three-quarter3.jpeg?q=85" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>TATA Nexon</h3>
@@ -256,7 +264,7 @@
             <div class=" shadow">
                 <div class="row p-3">
                     <div class="col-6 ">
-                        <img src="https://img.gaadicdn.com/images/car-images/360x240/Volkswagen/Polo/7743/1585979647933/222_flush-red_d52021.jpg" class="w-100">
+                        <img src="https://img.gaadicdn.com/images/car-images/360x240/Volkswagen/Polo/7743/1585979647933/222_flush-red_d52021.jpg" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Volkswagen polo</h3>
@@ -273,7 +281,7 @@
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6 ">
-                        <img src="https://imgd.aeplcdn.com/0x0/n/cw/ec/21497/kuv100-nxt-exterior-right-front-three-quarter-64046.jpeg" class="w-100">
+                        <img src="https://imgd.aeplcdn.com/0x0/n/cw/ec/21497/kuv100-nxt-exterior-right-front-three-quarter-64046.jpeg" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Mahindra kuv</h3>
@@ -290,7 +298,7 @@
             <div class="shadow">
                 <div class="row p-3 ">
                     <div class="col-6 ">
-                        <img src="https://cdn1.droom.in//uploads/category/hyundai/20200318041355000000-1203096601148383489.jpg" class="w-100">
+                        <img src="https://cdn1.droom.in//uploads/category/hyundai/20200318041355000000-1203096601148383489.jpg" style="width: 300px; height: 175px;" class="w-100">
                     </div>
                     <div class="col-6">
                         <h3>Hyundai Creta</h3>
@@ -303,6 +311,79 @@
             </div>
         </div>
     </div>
+
+    <hr>
+    <div class="bg-secondary text-light">
+        <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+
+        <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+    
+            <!-- Grid row -->
+            <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+    
+                <!-- Content -->
+                <h5 class="text-uppercase">Rent your favourite car</h5>
+                <p>We are available in:</p>
+                <ul>
+                    <li>Bangalore</li>
+                    <li>Mumbai</li>
+                    <li>Chennai</li>
+                    <li>Delhi</li>
+                    <li>Pune</li>
+                </ul>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="clearfix w-100 d-md-none pb-3">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+            </div>
+            <!-- Grid column -->
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+                <!-- Links -->
+                <h5 class="text-uppercase">Links</h5>
+                
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-warning" href="about_us.html">About us</a>
+                </li>
+                <li>
+                  <a class="text-warning" href="contact.html">Contact us</a>
+                </li>
+                <li>
+                  <a class="text-warning" href="homepage.html">Home</a>
+                </li>
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a class="text-warning" href="homepage.html"> masairentcar.com</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      <!-- Footer -->
+    </div>
+    
 
     <!--jquery link-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

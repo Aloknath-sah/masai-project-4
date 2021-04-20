@@ -56,16 +56,15 @@ window.onload = ()=>{
     l_form.addEventListener("submit", handleLogForm)
 }
 
-const handleRegForm=()=>{
+const handleRegForm = () => {
     event.preventDefault()
     var email = document.getElementById("r_email").value
+    var name = document.getElementById("r_name").value
     var password = document.getElementById("r_password").value
-    if(data.length == 0 && localStorage.getItem("registration").length == 0){
-        data.push({email,password})
-        var a = JSON.stringify(data)
-        localStorage.setItem("registration",a)
-        console.log(data)
-    }
+    data.push({name,email,password})
+    var a = JSON.stringify(data)
+    localStorage.setItem("registration",a)
+    console.log(data)
 }
 
 const handleLogForm=()=>{
@@ -75,16 +74,15 @@ const handleLogForm=()=>{
     var b = localStorage.getItem("registration")
     var res = JSON.parse(b)
     console.log(res)
+    console.log(l_email)
     if(res[0].email == l_email && res[0].password == l_password){
         var btn = document.getElementById("login")
-        btn.innerHTML = "logout"
+        btn.textContent = res[0].name
+        var reg = document.getElementById("reg")
+        reg.setAttribute("class", "hide")
+        var log = document.getElementById("log")
+        log.setAttribute("class", "hide")
     }
-    // if(data[0].email == l_email && data[0].password == l_password){
-    //     data.pop()
-    // }
-    // else{
-    //     handleError()
-    // }
 }
 
 const handleError=()=>{
